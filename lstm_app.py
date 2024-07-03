@@ -156,7 +156,7 @@ secondary_label_paths = {
     "Nonprofit and Social Services": 'LSTM_models/nonprofit/L2_nonprofit_dct.json',
     "Project and Operations Management" : 'LSTM_models/pm/L2_pm_dct.json',
     "Retail and Ecommerce": 'LSTM_models/retail/L2_retail_dct.json'
-
+}
 # Initialize the classifier
 classifier = HierarchicalTextClassifier(main_model_path, main_tokenizer_path, main_label_path,
                                         secondary_model_paths, secondary_tokenizer_paths, secondary_label_paths)

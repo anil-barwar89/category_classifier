@@ -1,2 +1,2 @@
 # category_classifier
-classify categoru at L1 and L2 level
+classify categories of text at L1 and L2 level

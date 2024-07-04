@@ -101,13 +101,18 @@ st.title('Hierarchical Text Classifier')
 st.sidebar.title('Catgories')
 st.sidebar.markdown('write a question from any of the below category to classify the text:')
 
-categories = list(config['secondary_label_paths'].keys())
-selected_category = st.sidebar.radio('Categories', categories)
+with open(config['l1_l2_mapping'], 'r') as file:
+    categories = json.load(file)
 
-if st.sidebar.button("About Us"):
-    st.sidebar.markdown("""
-    This is a Streamlit app demonstrating hierarchical text classification using deep learning models.
-    """)
+# Sidebar menu
+st.sidebar.title('Categories')
+selected_category = st.sidebar.radio('Select a Category', list(categories.keys()))
+
+# Display subcategories based on selected category
+if selected_category:
+    st.sidebar.markdown(f'Subcategories of {selected_category}:')
+    subcategories = categories[selected_category]
+    selected_subcategory = st.sidebar.selectbox('', subcategories)
 
 st.write("Enter text for classification:")
 

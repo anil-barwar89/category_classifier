@@ -98,8 +98,8 @@ classifier = HierarchicalTextClassifier(config)
 st.title('Hierarchical Text Classifier')
 
 # Sidebar menu
-st.sidebar.title('Catgories')
-st.sidebar.markdown('write a question from any of the below category to classify the text:')
+# st.sidebar.title('Catgories')
+# st.sidebar.markdown('write a question from any of the below category to classify the text:')
 
 with open(config['l1_l2_mapping'], 'r') as file:
     categories = json.load(file)

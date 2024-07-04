@@ -2,6 +2,7 @@ config = {
     "main_model_path": 'LSTM_models/L1/L1_model.h5',
     "main_tokenizer_path": 'LSTM_models/L1/L1_tokenizer.pkl',
     "main_label_path": 'LSTM_models/L1/L1_dct.json',
+    'l1_l2_mapping': 'LSTM_models/l1_l2_mapping.json',
     "secondary_model_paths": {
         'Business Intelligence and Analytics': 'LSTM_models/bi/L2_bi_model.h5',
         'Construction and Real Estate Development': 'LSTM_models/construction/L2_construction_model.h5',
